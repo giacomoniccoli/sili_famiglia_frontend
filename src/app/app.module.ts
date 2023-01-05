@@ -12,12 +12,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthLayoutComponent,
     AdminLayoutComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,8 +32,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
