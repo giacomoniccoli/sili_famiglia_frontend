@@ -1,0 +1,24 @@
+<mat-drawer-container fullscreen>
+    <mat-drawer #drawer mode="side" opened>
+        <mat-expansion-panel togglePosition="before" class="mat-elevation-z0">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Gestione protocollo
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+                <mat-list-item *ngFor="let link of ['AAA', 'BBB', 'CCC']" [activated]="false">
+                    <a matListItemTitle>{{ link }}</a>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-expansion-panel>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar color="accent">
+            <button mat-icon-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,37 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    AuthLayoutComponent,
+    AdminLayoutComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    MatTreeModule,
+    MatExpansionModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
