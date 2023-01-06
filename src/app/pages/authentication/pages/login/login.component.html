@@ -1,13 +1,28 @@
 <div class="content">
-    <mat-form-field appearance="outline">
-        <mat-label>login</mat-label>
-        <input matInput placeholder="Login">
-        <mat-icon matSuffix>login</mat-icon>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>password</mat-label>
-        <input matInput placeholder="password">
-        <mat-icon matSuffix>password</mat-icon>
-    </mat-form-field>
-    <button mat-flat-button color="primary" routerLink="/registry">Basic</button>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-grid-list cols="1" rowHeight="100">
+            <mat-grid-tile>
+                Login
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>email</mat-label>
+                    <input matInput placeholder="Login" type="email" formControlName="email">
+                    <mat-error *ngIf="loginForm.get('email')?.hasError">Invalid email</mat-error>
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>password</mat-label>
+                    <input matInput placeholder="password" type="text" formControlName="password">
+                    <mat-icon matSuffix>password</mat-icon>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button type="submit" [disabled]="!loginForm.valid" mat-flat-button color="primary"
+                    routerLink="/registry">Login</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
 </div>

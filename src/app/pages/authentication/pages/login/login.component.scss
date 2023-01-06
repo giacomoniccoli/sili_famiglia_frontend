@@ -1,5 +1,6 @@
 @mixin login-theme($theme) {
     .content {
+        max-width: 400px;
         margin: auto;
         padding: 10px;
     }
