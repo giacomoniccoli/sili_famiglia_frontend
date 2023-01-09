@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatListModule,
     MatExpansionModule,
+    MatBadgeModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],

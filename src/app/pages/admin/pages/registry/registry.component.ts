@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./registry.component.scss']
 })
 export class RegistryComponent {
-
+  currentDate: Date = new Date();
 }

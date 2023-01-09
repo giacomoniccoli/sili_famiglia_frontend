@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin admin-theme($theme) {
+    $color-config: mat.get-color-config($theme);
+    $primary: map.get($color-config, 'primary');
+    $accent: map.get($color-config, 'accent');
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    .avatar {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 10%;
+        margin-left: 10px;
+        background-color: mat.get-color-from-palette($primary);
+    }
+}
