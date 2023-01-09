@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "sili-famiglia-frontend": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "it": "src/locale/messages.it.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +23,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "it"
+            ],
             "outputPath": "dist/sili-famiglia-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
