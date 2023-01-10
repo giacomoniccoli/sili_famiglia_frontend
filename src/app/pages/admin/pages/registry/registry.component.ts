@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-registry',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./registry.component.scss']
 })
 export class RegistryComponent {
-  currentDate: Date = new Date();
+
+
+
 }

@@ -1,5 +1,8 @@
 <mat-drawer-container fullscreen>
     <mat-drawer #drawer mode="side">
+        <div class="logo">
+            logo
+        </div>
         <mat-expansion-panel togglePosition="before" class="mat-elevation-z0">
             <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -7,7 +10,8 @@
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <mat-nav-list>
-                <mat-list-item *ngFor="let link of ['AAA', 'BBB', 'CCC']" [activated]="false">
+                <mat-list-item *ngFor="let link of ['registry', 'postalizzazione', 'fascicoli']" [routerLink]="link"
+                    routerLinkActive="active">
                     <a matListItemTitle>{{ link }}</a>
                 </mat-list-item>
             </mat-nav-list>
@@ -18,10 +22,6 @@
             <button mat-icon-button (click)="drawer.toggle()">
                 <mat-icon>menu</mat-icon>
             </button>
-            <mat-form-field appearance="outline">
-                <input matInput placeholder="search...">
-                <mat-icon matPrefix>search</mat-icon>
-            </mat-form-field>
             <span class="spacer"></span>
             <button mat-icon-button>
                 <mat-icon matBadge="3" matBadgeColor="warn" color="primary">email</mat-icon>

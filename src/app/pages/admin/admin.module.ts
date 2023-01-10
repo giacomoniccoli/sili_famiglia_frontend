@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { RegistryComponent } from './pages/registry/registry.component';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { RegistryComponent } from './pages/registry/registry.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    MatListModule
   ],
 })
 export class AdminModule { }

@@ -10,6 +10,10 @@
         flex: 1 1 auto;
     }
 
+    .logo {
+        height: 150px;
+    }
+
     .avatar {
         vertical-align: middle;
         width: 40px;
@@ -18,4 +22,26 @@
         margin-left: 10px;
         background-color: mat.get-color-from-palette($primary);
     }
+
+    .mat-expansion-panel {
+
+        .active {
+            text-decoration: underline;
+
+            a {
+                color: mat.get-color-from-palette($accent);
+            }
+        }
+
+        a {
+            color: #7784ac;
+        }
+
+        mat-panel-title {
+            color: mat.get-color-from-palette($accent);
+        }
+
+        background-color: mat.get-color-from-palette($primary);
+    }
+
 }
