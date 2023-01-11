@@ -24,7 +24,6 @@ import { MatBadgeModule } from '@angular/material/badge';
     AuthLayoutComponent,
     AdminLayoutComponent,
     PageNotFoundComponent,
-
   ],
   imports: [
     BrowserModule,
