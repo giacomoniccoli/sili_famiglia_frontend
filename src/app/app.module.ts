@@ -15,8 +15,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
+import { HttpClientModule } from '@angular/common/http';
+import { httpInterceptorProviders } from './providers/http-interceptor-providers';
+import { AuthService } from './services/auth-service';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { MatBadgeModule } from '@angular/material/badge';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
@@ -39,7 +42,10 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    httpInterceptorProviders,
+  ],
   bootstrap: [AppComponent],
 
 })
