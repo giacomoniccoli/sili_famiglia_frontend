@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Test } from '../models/models';
 import { catchError, throwError } from 'rxjs';
+import { Test } from '../models/test';
 
 export interface Response<T> {
   statusCode?: number;
@@ -17,7 +17,6 @@ export class ConfigService {
 
   getTest() {
     return this.http.get<Response<Test>>(this.url).pipe(catchError(this.handleError));
-
   }
 
   private handleError(error: HttpErrorResponse) {

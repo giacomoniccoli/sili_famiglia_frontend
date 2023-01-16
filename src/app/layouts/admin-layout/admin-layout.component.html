@@ -1,42 +1,9 @@
-<mat-drawer-container fullscreen>
-    <mat-drawer #drawer mode="side">
-        <div class="logo">
-            logo
-        </div>
-        <mat-expansion-panel togglePosition="before" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Gestione protocollo
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-                <mat-list-item *ngFor="let link of ['registry', 'postalizzazione', 'fascicoli']" [routerLink]="link"
-                    routerLinkActive="active">
-                    <a matListItemTitle>{{ link }}</a>
-                </mat-list-item>
-            </mat-nav-list>
-        </mat-expansion-panel>
-    </mat-drawer>
-    <mat-drawer-content>
-        <mat-toolbar color="accent">
-            <button mat-icon-button (click)="drawer.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <span class="spacer"></span>
-            <button mat-icon-button>
-                <mat-icon matBadge="3" matBadgeColor="warn" color="primary">email</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon color="primary" matBadge="1" matBadgeColor="warn">notifications</mat-icon>
-            </button>
-            <div class="user2">
-                <div class="avatar"></div>
-                <div class="user">
-                    <span class="name">Mario rossi</span>
-                    <span class="role">amministratore</span>
-                </div>
-            </div>
-        </mat-toolbar>
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode="side">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-toolbar (toggleEmitter)="sidenav.toggle()"></app-toolbar>
         <router-outlet></router-outlet>
-    </mat-drawer-content>
-</mat-drawer-container>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

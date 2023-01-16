@@ -19,6 +19,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './providers/http-interceptor-providers';
 import { AuthService } from './services/auth-service';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { AuthService } from './services/auth-service';
     AuthLayoutComponent,
     AdminLayoutComponent,
     PageNotFoundComponent,
+    SidenavComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,

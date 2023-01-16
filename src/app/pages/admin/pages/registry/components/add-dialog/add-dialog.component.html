@@ -1,0 +1,28 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <h1 mat-dialog-title>Add user</h1>
+    <div mat-dialog-content>
+
+            <p>Insert user data</p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" type="name" formControlName="name">
+                    <mat-error *ngIf="userForm.get('name')?.hasError">Invalid name</mat-error>
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+            </p>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Login" type="email" formControlName="email">
+                <mat-error *ngIf="userForm.get('email')?.hasError">Invalid email</mat-error>
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <p>
+                <mat-slide-toggle color="warn" formControlName="status">User status: {{userForm.get('status')?.value == true ? 'active' : 'disabled'}}</mat-slide-toggle>
+            </p>
+    </div>
+    <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button type="submit" [disabled]="!userForm.valid">Save</button>
+    </mat-dialog-actions>
+</form>

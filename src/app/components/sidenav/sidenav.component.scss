@@ -1,12 +1,12 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 
-@mixin registry-theme($theme) {
+@mixin sidenav-theme($theme) {
     $color-config: mat.get-color-config($theme);
     $primary: map.get($color-config, 'primary');
     $accent: map.get($color-config, 'accent');
 
-    .filter{
-        padding-right: 20px;
+    .sidenav{
+        padding: 20px;
     }
 }

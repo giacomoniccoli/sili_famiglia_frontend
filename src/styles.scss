@@ -5,6 +5,9 @@
 @import "app/theme/sili";
 @import "app/layouts/admin-layout/admin-layout.component.scss";
 @import "app/pages/authentication/pages/login/login.component.scss";
+@import "app/pages/admin/pages/registry/registry.component.scss";
+@import "app/components/toolbar/toolbar.component.scss";
+@import "app/components/sidenav/sidenav.component.scss";
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -34,6 +37,9 @@ $sili-famiglia-frontend-theme: mat.define-light-theme((color: (primary: $sili-fa
 @include mat.all-component-themes($sili-famiglia-frontend-theme);
 @include login-theme($sili-famiglia-frontend-theme);
 @include admin-theme($sili-famiglia-frontend-theme);
+@include toolbar-theme($sili-famiglia-frontend-theme);
+@include sidenav-theme($sili-famiglia-frontend-theme);
+@include registry-theme($sili-famiglia-frontend-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

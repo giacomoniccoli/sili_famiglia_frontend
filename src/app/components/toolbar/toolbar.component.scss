@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin toolbar-theme($theme) {
+    $color-config: mat.get-color-config($theme);
+    $primary: map.get($color-config, 'primary');
+    $accent: map.get($color-config, 'accent');
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    .logo {
+        height: 150px;
+    }
+
+    .user2 {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            border-radius: 10%;
+            margin: 0 20px 0 30px;
+            background-color: mat.get-color-from-palette($primary);
+        }
+
+        .user {
+
+            .name {
+                display: block;
+                font-size: 18px;
+            }
+
+            .role {
+                font-size: 14px;
+                font-style: italic;
+            }
+
+        }
+    }
+
+}

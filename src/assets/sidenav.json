@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Registry",
+        "routerLink": "/registry"
+    },
+    {
+        "title": "Legal",
+        "routerLink": "/legal"
+    },
+    {
+        "title": "Project",
+        "routerLink": "/project"
+    }
+]
