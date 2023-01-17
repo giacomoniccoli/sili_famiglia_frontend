@@ -6,4 +6,8 @@
     $primary: map.get($color-config, 'primary');
     $accent: map.get($color-config, 'accent');
 
+    .mat-sidenav{
+        background-color: mat.get-color-from-palette($primary);
+    }
+
 }

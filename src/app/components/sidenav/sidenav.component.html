@@ -1,21 +1,10 @@
-        <div class="logo">
-            logo
-        </div>
-        <mat-nav-list>
-            <mat-list-item *ngFor="let link of navItems | async" [routerLink]="link.routerLink" [activated]="false">
-               <a matListItemTitle>{{ link.title }}</a>
-            </mat-list-item>
-        </mat-nav-list>
-<!--         <mat-expansion-panel togglePosition="before" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Gestione protocollo
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-                <mat-list-item *ngFor="let link of ['registry', 'postalizzazione', 'fascicoli']" [routerLink]="link"
-                    routerLinkActive="active">
-                    <a matListItemTitle>{{ link }}</a>
-                </mat-list-item>
-            </mat-nav-list>
-        </mat-expansion-panel> -->
+<div id="sidenav">
+    <div class="logo">
+        logo
+    </div>
+    <mat-nav-list>
+        <mat-list-item *ngFor="let link of navItems | async" [routerLink]="link.routerLink" [activated]="false">
+           <a matListItemTitle class="navItem">{{ link.title }}</a>
+        </mat-list-item>
+    </mat-nav-list>
+</div>

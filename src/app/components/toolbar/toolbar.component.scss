@@ -14,7 +14,15 @@
         height: 150px;
     }
 
-    .user2 {
+    #search{
+        padding: 10px;
+        margin-left: 10px;
+        border-radius: 30px;
+        border: none;
+        background-color : #f2f2f2; 
+    }
+
+    .user-info{
         display: flex;
         align-items: center;
 
@@ -27,18 +35,15 @@
             background-color: mat.get-color-from-palette($primary);
         }
 
-        .user {
-
+        .data {
+            display: flex;
+            flex-direction: column;
             .name {
-                display: block;
-                font-size: 18px;
+                font-weight: bold;
             }
-
             .role {
-                font-size: 14px;
                 font-style: italic;
             }
-
         }
     }
 

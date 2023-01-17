@@ -21,6 +21,7 @@ import { httpInterceptorProviders } from './providers/http-interceptor-providers
 import { AuthService } from './services/auth-service';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     MatExpansionModule,
     MatBadgeModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [
     AuthService,

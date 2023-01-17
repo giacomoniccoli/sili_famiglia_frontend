@@ -6,7 +6,11 @@
     $primary: map.get($color-config, 'primary');
     $accent: map.get($color-config, 'accent');
 
-    .filter{
-        padding-right: 20px;
+    #registry{
+        padding: 20px;
+        .filter{
+            padding-right: 20px;
+        }
     }
+
 }

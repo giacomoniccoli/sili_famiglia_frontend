@@ -6,7 +6,10 @@
     $primary: map.get($color-config, 'primary');
     $accent: map.get($color-config, 'accent');
 
-    .sidenav{
-        padding: 20px;
+    #sidenav{
+        min-width: 200px;
+        .navItem{
+            color: mat.get-color-from-palette($accent);
+        } 
     }
 }

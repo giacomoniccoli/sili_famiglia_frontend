@@ -9,6 +9,12 @@
     },
     {
         "title": "Project",
-        "routerLink": "/project"
+        "routerLink": "/project",
+        "children": [
+            {
+                "title": "Legal",
+                "routerLink": "/legal"
+            }
+        ]
     }
 ]

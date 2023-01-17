@@ -7,5 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ToolbarComponent {
   @Output() toggleEmitter: EventEmitter<any> = new EventEmitter();
+  @Output() searchEmitter: EventEmitter<string> = new EventEmitter();
+  name: string = '';
 
+  onSearchChange(value: string){
+   this.searchEmitter.emit(value);
+  }
 }
